@@ -74,12 +74,14 @@ svg.material-icons:not(:last-child) {
     padding: 1em;
     width: 200px;
 
-    .message-title {
-      font-weight: bold;
-    }
+    .message-wrapper {
+      .message-title {
+        font-weight: bold;
+      }
 
-    .message-text {
-      color: red;
+      .message-text {
+        color: red;
+      }
     }
   }
 }

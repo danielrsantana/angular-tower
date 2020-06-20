@@ -1,5 +1,6 @@
 import { Component, Input, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
+import { CardService } from 'src/app/services/card.service';
 
 export enum CardType {
   Dynamic = 'dynamic',
@@ -17,14 +18,19 @@ export class CardComponent {
   @Input() type: string;
   @Output() onClick = new EventEmitter<string>();
 
+  constructor(private cardService: CardService) {
+  }
+
   public onCardClicked = () => {
     switch (this.type) {
       case CardType.Event:
         if (this.onClick)
           this.onClick.emit(this.type);
         break;
-      case CardType.Dynamic:
       case CardType.Servide:
+        this.cardService.setMessage(this.type);
+        break;
+      case CardType.Dynamic:
       default:
         break;
     }

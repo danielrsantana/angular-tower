@@ -16,19 +16,25 @@
   </div>
 
   <div class="message-container">
-    <div class="message-box" *ngIf="eventCardMessage">
-      <span class="message-title">Event Message:&nbsp;</span>
-      <span class="message-text">{{eventCardMessage}}</span>
+    <div class="message-box">
+      <div class="message-wrapper" *ngIf="eventCardMessage">
+        <span class="message-title">Event Message:&nbsp;</span>
+        <span class="message-text">{{eventCardMessage}}</span>
+      </div>
     </div>
 
-    <div class="message-box" *ngIf="serviceCardMessage">
-      <span class="message-title">Service Message:&nbsp;</span>
-      <span class="message-text">{{serviceCardMessage}}</span>
+    <div class="message-box">
+      <div class="message-wrapper" *ngIf="serviceCardMessage">
+        <span class="message-title">Service Message:&nbsp;</span>
+        <span class="message-text">{{serviceCardMessage}}</span>
+      </div>
     </div>
 
-    <div class="message-box" *ngIf="dynamicCardMessage">
-      <span class="message-title">Dynamic Message:&nbsp;</span>
-      <span class="message-text">{{dynamicCardMessage}}</span>
+    <div class="message-box">
+      <div class="message-wrapper" *ngIf="dynamicCardMessage">
+        <span class="message-title">Dynamic Message:&nbsp;</span>
+        <span class="message-text">{{dynamicCardMessage}}</span>
+      </div>
     </div>
   </div>
 </div>
